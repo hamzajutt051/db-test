@@ -101,7 +101,7 @@ export default function HomePage() {
           {filterProducts.map((product) => (
             <div
               key={product.id}
-              className="border border-gray-300 dark:border-gray-700 rounded-md p-4"
+              className="border border-gray-300 dark:border-gray-700 rounded-md p-4 group"
             >
               <div className="flex justify-center items-center">
                 <img
@@ -112,7 +112,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col justify-center items-center mt-4">
                 <div className="flex justify-between w-full items-center md:flex-col md:items-start">
-                  <h1 className="text-xl font-bold">
+                  <h1 className="text-md font-bold">
                     {product.title.length > 20
                       ? product.title.slice(0, 20) + "..."
                       : product.title}
@@ -131,7 +131,7 @@ export default function HomePage() {
                     }
                   />
                   <button
-                    className="bg-yellow-500 text-white px-4 py-2 rounded-md"
+                    className="bg-yellow-500 text-white px-4 py-2 rounded-md md:opacity-0 group-hover:opacity-100 transition-all"
                     onClick={() => addToCart(product)}
                   >
                     Add to cart
